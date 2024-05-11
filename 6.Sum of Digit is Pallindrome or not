@@ -1,0 +1,32 @@
+Problem Statemnet : Given a number n.Find if the digit sum(or sum of digits) of n is a Palindrome number or not.
+                    Note: A Palindrome number is a number that stays the same when reversed. Example- 121 , 131 , 7 etc.
+Solution (C++) : 
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        int a,s,sum=0,rev=0;
+        while(n>0)
+        {
+            a=n%10;
+            sum += a;
+            n=n/10;
+        }
+        s=sum;
+        while(sum>0)
+        {
+            a=sum%10;
+            rev= rev*10+a;
+            sum=sum/10;
+        }
+        if(s==rev)
+            return 1;
+        else
+            return 0;
+    }
+};
+Explanation : Firstly the sum of the digits of given number(n) is found using a while loop with condition n > 0.
+Every digit obtained by '%' operator is added to a variable sum(s) which is initially 0.
+Then the reverse of the sum is obtained using another while loop where sum > 0.
+Every digit obtained by '%' operator and is added to a variable rev which is multiplied by 10 every time the loop runs.
+The sum is updated to sum/10.
+Finally if s is equal to rev 1 is returned , else 0.
