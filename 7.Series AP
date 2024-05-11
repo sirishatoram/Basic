@@ -1,0 +1,13 @@
+Problem Statement : Given the first 2 terms a1 and a2 of an Arithmetic Series.Find the nth term of the series.
+Solution (C++) : 
+class Solution {
+  public:
+    int nthTermOfAP(int a1, int a2, int n) {
+      int an;
+      an=a1+(n-1)*(a2-a1);
+      return an;
+    }
+};
+Explanation : In an Arthimetic Progression (AP), the difference between any two terms is same.
+We use the formula a+(n-1)*(a2-a1) to find the nth term, where a1,a2 are first two terms of the progression.
+The result is stored in an and returned.
