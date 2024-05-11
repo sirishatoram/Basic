@@ -17,4 +17,8 @@ class Solution {
             return "No";
     }
 };
-Explanation : 
+Explanation : For a given 3 digit number(n), we run a while loop till n > 0.
+Inside the loop, the last digit is obtained by using '%' operator and its cube is added to the variable sum which is initially 0.
+Then n is updated to n/10.
+Finally is sum is equal to the given number, 'Yes' is returned else 'No'.
+
