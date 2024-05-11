@@ -1,0 +1,20 @@
+Question : For a given 3 digit number, find whether it is armstrong number or not. 
+An Armstrong number of three digits is a number such that the sum of the cubes of its digits is equal to the number itself. Return "Yes" if it is a armstrong number else return "No".
+Solution (C++) :
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int sum=0,a=0,num=n;
+        while(n>0)
+        {
+            a=n%10;
+            sum+=(a*a*a);
+            n=n/10;
+        }
+        if(sum==num)
+            return "Yes";
+        else
+            return "No";
+    }
+};
+Explanation : 
