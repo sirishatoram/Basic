@@ -1,0 +1,11 @@
+Problem statement : Write a program to find the sum of the given series 1+2+3+ . . . . . .(N terms) 
+Solution (C++) :
+class Solution {
+  public:
+    long long seriesSum(int n) {
+        long long x=0;
+        x=(long long)n*(n+1)/2;//Type conversion
+        return x;
+    }
+};
+Explanation : 
