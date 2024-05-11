@@ -9,3 +9,5 @@ class Solution {
     }
 };
 Explanation : 
+Sum of first n natural numbers can be found using formula n*(n+1)/2.
+Here using formula and type casting it to required data type we get the result.
