@@ -1,0 +1,9 @@
+Problem Statement : Given two numbers A and B. Your task is to return the sum of A and B.
+Solution (C++) : 
+class Solution{   
+public:
+    int addition(int A, int B){
+        return A+B;
+    }
+};
+Explanation : The sum of given two numbers A and B is done using '+' operator and the sum is returned.
