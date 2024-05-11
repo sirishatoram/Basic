@@ -1,0 +1,16 @@
+Problem Statement : Create the multiplication table of a given number N and return the table as an array.
+Solution (C++) :
+class Solution
+{
+public:
+    vector<int> getTable(int N)
+    {
+        vector<int> table;
+        for(int i=1;i<11;i++)
+        {
+            table.push_back(N*i);
+        }
+        return table;
+    }
+};
+Explanation : Initially an integer vector 'table' is considered where every multiple of given number(N) is added to it using push_back() upto 10 multiples and the table is returned.
