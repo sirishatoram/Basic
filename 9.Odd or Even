@@ -1,0 +1,14 @@
+Problem Statement : Given a positive integer N, determine whether it is odd or even.
+Solution (C++) :
+class Solution{   
+public:
+    string oddEven(int N){
+        if(N%2==0)
+            return "even";
+        else
+            return "odd";
+    }
+};
+Explanation : Any natural number is said to be even, if it is leaves a remainder 0 when divided by two, else odd.
+The '%' operator is used to find the remainder when divided by a number.
+If the given number(N) leaves remainder 0 when divided by 2, then it is "even", else "odd".
