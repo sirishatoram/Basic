@@ -1,0 +1,20 @@
+Problem statement : Given an array arr[] of N integers, calculate the median.
+Solution (C++) : 
+class Solution
+{
+public:
+	public:
+		int find_median(vector<int> v)
+		{
+		    sort(v.begin(),v.end());
+		    int n=v.size();
+		    if(n%2==0)
+		        return (v[n/2]+v[n/2-1])/2;
+		    else
+		        return v[n/2];
+		}
+};
+Explanation : Median for a given list of observations is the middle most value.
+Firstly we sort the given vector using inbuilt sort function.
+The size of the vector is found using size() method.
+If number of observations is even, the mean of middle most observetions is considered else, the middle most observetion is returned.
