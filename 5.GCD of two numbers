@@ -1,0 +1,19 @@
+Problem Statement : Given two positive integers a and b, find GCD of a and b.
+                    Note: Don't use the inbuilt gcd function.
+Solution (C++) : 
+class Solution {
+  public:
+    int gcd(int a, int b) {
+        int temp;
+        while(b>0)
+        {
+            temp=b;
+            b=a%b;
+            a=temp;
+        }
+        return a;
+    }
+};
+Explanation : To find the Greatest Common Divisor(gcd) of two numbers (a,b) we use a while loop until b > 0 where the value of b is stored in a temporary variable and its value is updated to a%b.
+Then the value in the temporary variable is updated to a.
+When becomes 0, the value at a becomes the gcd of the two numbers.
