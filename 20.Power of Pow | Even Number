@@ -1,0 +1,14 @@
+Problem Statement : Given a single integer N, your task is to find the sum of the square of the first N even natural Numbers.
+Solution (C++) : 
+class Solution
+{
+	public:
+		long long int sum_of_square_evenNumbers(long long int n)
+		{
+		    long long int sum = 2*n*(n+1)*(2*n+1)/3;
+		    return sum;
+		}
+};
+Explanation : We use the formula 2*n*(n+1)*(2*n+1)/3 to find the sum of the squares of the first N even natural numbers.
+This formula is obtained from the formula n*(n+1)*(2*n+1)/3, which is to find the sum of the squares of the first N natural numbers.
+The result is calculated and then returned.
