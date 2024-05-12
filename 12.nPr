@@ -1,0 +1,20 @@
+Problem Statement : Write a program to calculate nPr. nPr represents n permutation r and value of nPr is (n!) / (n-r)!.
+Solution (C++) :
+class Solution{
+public:
+    long long fact(int n)
+    {
+        if(n==0)
+            return 1;
+        else 
+            return n*fact(n-1);
+    }
+    long long nPr(int n, int r){
+        long long res=fact(n)/fact(n-r);
+        return res;
+    }
+};
+Explanation : To find nPr using given formula, we define a function fact which returns the factorial of a given number.
+In function fact, we use base case that if n is equal to 0, then return 1 and do a recursive call of n*fact(n-1). 
+Since factorial of n is n*(n-1)*(n-2)*...*2*1.
+In nPr function, we calculate the result using given formula and return it.
