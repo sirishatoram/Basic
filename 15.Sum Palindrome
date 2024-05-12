@@ -1,0 +1,50 @@
+Problem Statement : Given a number, reverse it and add it to itself unless it becomes a palindrome or number of iterations becomes more than 5.
+Solution (C++) :
+class Solution {
+  public:
+    int ispalin(long long n)
+    {
+        long long a,rev=0,num=n;
+        while(n>0)
+        {
+            a=n%10;
+            rev=rev*10+a;
+            n=n/10;
+        }
+        if(rev==num)
+            return 1;
+        else
+            return 0;
+    }
+    long long isSumPalindrome(long long n){
+        long long rev=0,num=n,a;
+        int k=0;
+        if(ispalin(num))
+            return num;
+        while(n>0 && k<5)
+        {
+            a=n%10;
+            rev=rev*10+a;
+            n=n/10;
+            if(n<=0)
+            {
+                k++;
+                if(ispalin(num+rev))
+                    return num+rev;
+                else
+                {
+                    n=num=num+rev;
+                    rev=0;
+                }
+            }
+        }
+        return -1;
+    }
+};
+Explantion : We need to check if the given number (n) is a palindrome else we need to reverse and sum it, until it becomes a palindrome upto 5 times.
+If a palindrome is not obtained -1 is returned.
+A function 'ispalin' is defined to check if a given number is a palindrome or not by reversing the given number and checking with the original number.
+If both are same,1 is returned else 0.
+If the given number is a palindrome, the number is returned. Else we use a while loop which iterates till k<5 and n>0.
+Here k is a variable which counts the number of times we reversed a number and added to it.
+Inside the loop,
