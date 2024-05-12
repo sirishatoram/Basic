@@ -1,0 +1,19 @@
+Problem Statement : Given a stream of incoming numbers, find average or mean of the stream at every point.
+Solution (C++) : 
+class Solution{
+public:	
+	vector<float> streamAvg(int arr[], int n) {
+	    vector<float> avg;
+	    float sum=0;
+	    for(int i=1;i<=n;i++)
+	    {
+	        sum+=arr[i-1];
+	        avg.push_back(float(sum/i));
+	    }
+	    return avg;
+	}
+};
+Explanation : To find the average of elements in the given array(arr) of n elements at each point, a floating varaiable sum and a vector avg are declared.
+We use a for loop which iterates for n times where in each iteration the sum of the elements upto that point is calculated by adding each element to sum which is initially 0.
+Then using sum, we calculate the mean upto those elements and add the result to vector avg, using push_back() method.
+Finally, the vector avg is returned.
