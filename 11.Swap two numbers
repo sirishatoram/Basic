@@ -1,0 +1,12 @@
+Problem Statement : Swap given two numbers and print them. (Try to do it without a temporary variable.) and return it.
+Solution (C++) : 
+class Solution{   
+public:
+    pair<int, int> get(int a, int b){
+        pair<int,int> PAIR(b,a);
+        return PAIR;
+        
+    }
+};
+Explanation : Here, we use a pair of both elements with integer datatype. 
+To swap the given elements, during initialisation of the pair the swapped values are assigned to them and returned. 
