@@ -1,0 +1,9 @@
+Problem Statement : Given three integers P,R and T, denoting Principal, Rate of Interest and Time period respectively.Compute the simple Interest.
+Solution (C++) : 
+class Solution {
+  public:
+    double simpleInterest(int P, int R, int T) {
+        return double(P*R*T)/100;
+    }
+};
+Explanation : The simple interest is calculated using the formula (P*R*T)/100, which is calculated and returned.
