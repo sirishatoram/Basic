@@ -1,0 +1,13 @@
+Problem Statement : Given a number N, find the Nth term in the series 1, 3, 6, 10, 15, 21,...
+Solution (C++) : 
+class Solution {
+  public:
+    int findNthTerm(int N) {
+        if(N==1)
+            return 1;
+        else 
+            return N+findNthTerm(N-1);
+    }
+};
+Explanation : The nth term in the given series 1,3,6,10,... is obtained by adding n to the previous term.
+We use recursion to solve this problem where if n = 1, 1 is returned (base case) else (n + findNthTerm(n-1)) is returned.
