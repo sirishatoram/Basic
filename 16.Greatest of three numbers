@@ -1,0 +1,15 @@
+Problem Statement : Given 3 numbers A, B and C. Find the greatest number among them.
+Solution (C++) : 
+class Solution {
+  public:
+    int greatestOfThree(int A, int B, int C) {
+        if(A>B && A>C)
+            return A;
+        else if(B>C && B>A)
+            return B;
+        else if(C>A && C>B)
+            return C;
+    }
+};
+Explanation :To find the greatest among the given 3 numbers we use if..else..if.. conditions.
+If one of the number is greater than the other two numbers,then that number is returned.
