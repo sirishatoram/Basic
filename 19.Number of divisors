@@ -1,0 +1,26 @@
+Problem Statement : Given an integer N, find the number of divisors of N that are divisible by 3.
+Solution (C++) :
+class Solution
+{
+	public:
+		int count_divisors(int n)
+		{
+		    int count=0;
+		    for(int i=1;i*i<=n;i++)
+		    {
+		        if(n%i==0)
+		        {
+		            if(i%3==0)
+		                count++;
+		            if((n/i)%3==0 && n!=i*i)
+		                count++;
+		        }
+		    }
+		    return count;
+		}
+};
+Explanation : To count the divisors of given number(n) which are also divisible by 3, we use a variable count which keeps a count of them and is initialized to 0.
+We use a for loop which runs from i=1 till i*i<=n where half of the factors of n are present.
+'%' operator is used to find if a number is a divisor of n and 3.If yes, then count is incremented twice as i and (n/i) are factors.
+If i and (n/i) are same i.e when the given number is a perfect square, the count is incremented only once.
+At the end, the count is returned.
